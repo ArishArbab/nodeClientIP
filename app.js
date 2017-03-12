@@ -14,6 +14,8 @@ app.get('/ip',function(req,res){
     res.send(json);
 });
 
-app.listen(9000,function () {
+var port = process.env.PORT || 8080
+
+app.listen(port,function () {
     console.log("Listening...")
 });
