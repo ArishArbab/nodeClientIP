@@ -1,0 +1,29 @@
+<!--<form action="http://localhost:9000/login" method="post">
+    Username<input type="text" name="user[name]"><br/>
+    Password<input type="password" name="user[password]"><br/>
+    <input type="submit" value="Submit">
+</form>-->
+<div id="time"></div>
+<br/><br/>
+<div id="ip"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+            $.get("/ip", function(data, status){
+                //alert("Data: " + data.clientIp + "\nStatus: " + status);
+                document.getElementById("ip").innerHTML="IP Adress: "+data.clientIp
+            });
+        var currentdate = new Date();
+        var datetime = "Current DateTime: " + currentdate.getDate() + "/"
+            + (currentdate.getMonth()+1)  + "/"
+            + currentdate.getFullYear() + " @ "
+            + currentdate.getHours() + ":"
+            + currentdate.getMinutes() + ":"
+            + currentdate.getSeconds();
+        document.getElementById("time").innerHTML=datetime;
+    });
+</script>
+
+

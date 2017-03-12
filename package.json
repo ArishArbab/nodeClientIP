@@ -1,0 +1,16 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "This is sample web applicatio",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "ipware": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arish",
+  "license": "ISC"
+}
